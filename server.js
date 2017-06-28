@@ -53,6 +53,10 @@ app.get('/bad', (req, res) => {
     res.send();
 });
 
+app.get('/projects', (req, res) => {
+   res.render('projects.hbs');
+});
+
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         title: 'whaattt'
