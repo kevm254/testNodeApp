@@ -54,13 +54,22 @@ app.get('/bad', (req, res) => {
 });
 
 app.get('/projects', (req, res) => {
-   res.render('projects.hbs');
+   let data = {
+       pageTitle: 'This is the new page title'
+   };
+
+    res.render('projects.hbs', data);
 });
+
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         title: 'whaattt'
     });
+});
+
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio.hbs')
 });
 
 app.get('/about/:test', ()=> {
